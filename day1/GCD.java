@@ -7,14 +7,16 @@ public class GCD {
     int num2 = Integer.parseInt(args[1]);
 
     int gcd = 0;
-    int smaller = num1 < num2 ? num1 : num2;
+    int divisor = num1 < num2 ? num1 : num2;
 
-    for(int number = smaller; number > 0 && gcd == 0; number--){
-      boolean isDivisible = num1 % number == 0 && num2 % number == 0;
+    while(divisor > 0 && gcd == 0){
+      boolean isDivisible = num1 % divisor == 0 && num2 % divisor == 0;
       if(isDivisible){
-        gcd = number;
+        gcd = divisor;
       }
+      divisor--;
     }
+    
     System.out.println(gcd);
   }
 }
