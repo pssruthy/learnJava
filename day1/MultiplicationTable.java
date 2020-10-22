@@ -3,6 +3,12 @@
 
 public class MultiplicationTable {
   public static void main(String[] args) {
+
+    if(args.length < 2){
+      System.out.println("Please give 2 parameters");
+      return;
+    }
+
     int m = Integer.parseInt(args[0]);
     int n = Integer.parseInt(args[1]);
 

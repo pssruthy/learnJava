@@ -3,10 +3,16 @@
 
 public class Fibonacci {
   public static void main(String[] args) {
-    int currentTerm = 0;
-    int nextTerm = 1;
+
+    if(args.length < 1){
+      System.out.println("Please give 2 parameters");
+      return;
+    }
 
     int termLimit = Integer.parseInt(args[0]);
+    
+    int currentTerm = 0;
+    int nextTerm = 1;
 
     for(int term = 1; term <= termLimit; term++){
       System.out.println(currentTerm);

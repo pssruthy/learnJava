@@ -3,11 +3,17 @@
 
 public class SimpleInterest {
   public static void main(String[] args) {
+
+    if(args.length < 3){
+      System.out.println("Please give 3 parameters");
+      return;
+    }
+
     int principal = Integer.parseInt(args[0]);
     int interestRate = Integer.parseInt(args[1]);
     int period = Integer.parseInt(args[2]);
 
-    double simpleInterest = (principal * interestRate * period) / 100;
+    double simpleInterest = (principal * interestRate * period) / 100.0;
 
     System.out.println(simpleInterest);
   }

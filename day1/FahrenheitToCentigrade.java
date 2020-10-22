@@ -3,7 +3,13 @@
 
 public class FahrenheitToCentigrade{
   public static void main(String[] args) {
-    int fahrenheit = Integer.parseInt(args[0]);
+
+    if(args.length < 1){
+      System.out.println("Please give temperature in fahrenheit");
+      return;
+    }
+
+    float fahrenheit = Float.parseFloat(args[0]);
     float centigrade = (fahrenheit - 32) * (5/ 9F);
 
     System.out.println("Fahrenheit : " + fahrenheit );

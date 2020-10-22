@@ -4,6 +4,12 @@
 
 public class Calculator {
   public static void main(String[] args) {
+
+    if(args.length < 3){
+      System.out.println("Please give 3 parameters");
+      return;
+    }
+
     String operator = args[0];
     int operand1 = Integer.parseInt(args[1]);
     int operand2 = Integer.parseInt(args[2]);

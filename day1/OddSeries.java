@@ -1,5 +1,11 @@
 public class OddSeries {
   public static void main(String[] args) {
+
+    if(args.length < 1){
+      System.out.println("Please give the limit");
+      return;
+    }
+
     int limit = Integer.parseInt(args[0]);
 
     int currentOdd = 1;

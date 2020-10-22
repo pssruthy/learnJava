@@ -3,6 +3,12 @@
 
 public class CompoundInterest {
   public static void main(String[] args) {
+
+    if(args.length < 3){
+      System.out.println("Please give 3 parameters");
+      return;
+    }
+
     int principal = Integer.parseInt(args[0]);
     double interestRate = Integer.parseInt(args[1]) / 100.0;
     int period = Integer.parseInt(args[2]);

@@ -3,6 +3,12 @@
 
 public class GCD {
   public static void main(String[] args) {
+
+    if(args.length < 2){
+      System.out.println("Please give 2 numbers");
+      return;
+    }
+
     int num1 = Integer.parseInt(args[0]);
     int num2 = Integer.parseInt(args[1]);
 
