@@ -4,8 +4,8 @@ public class LargestOfThreeNumbers {
     int num2 = Integer.parseInt(args[1]);
     int num3 = Integer.parseInt(args[2]);
 
-    int largest = num1 > num2 ? num1 : num2;
-    largest = largest > num3 ? largest : num3;
+    int largest = Math.max(num1, num2);
+    largest = Math.max(largest, num3);
 
     System.out.println(largest);
   }

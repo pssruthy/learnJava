@@ -6,14 +6,14 @@ public class LCM {
     int num1 = Integer.parseInt(args[0]);
     int num2 = Integer.parseInt(args[1]);
 
-    int small = num1 < num2 ? num1 : num2;
-    int big = num1 > num2 ? num1 : num2;
+    int smallerNum = Math.min(num1, num2);
+    int biggerNum = Math.max(num1, num2);
 
-    int number = big;
-    while(number % small != 0){
-      number = number + big;
+    int number = biggerNum;
+    while(number % smallerNum != 0){
+      number += biggerNum;
     }
 
-    System.out.println("LCM of " + small + " and " + big + " is " + number);
+    System.out.println("LCM of " + smallerNum + " and " + biggerNum + " is " + number);
   }
 }

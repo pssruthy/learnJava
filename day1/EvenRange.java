@@ -3,11 +3,11 @@ public class EvenRange {
     int start = Integer.parseInt(args[0]);
     int end = Integer.parseInt(args[1]);
 
-    int number = start % 2 == 0 ? start : start + 1;
+    int currentEven = start % 2 == 0 ? start : start + 1;
 
-    while(number <= end){
-      System.out.println(number);
-      number += 2;
+    while(currentEven <= end){
+      System.out.println(currentEven);
+      currentEven += 2;
     }
   }
 }

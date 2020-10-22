@@ -3,13 +3,15 @@
 
 public class Fibonacci {
   public static void main(String[] args) {
-    int currentNo = 0;
-    int nextNum = 1;
+    int currentTerm = 0;
+    int nextTerm = 1;
 
-    for(int count = 1; count <= Integer.parseInt(args[0]); count++){
-      System.out.println(currentNo);
-      nextNum = currentNo + nextNum;;
-      currentNo = nextNum - currentNo;
+    int termLimit = Integer.parseInt(args[0]);
+
+    for(int term = 1; term <= termLimit; term++){
+      System.out.println(currentTerm);
+      nextTerm = currentTerm + nextTerm;;
+      currentTerm = nextTerm - currentTerm;
     }
   }
 }

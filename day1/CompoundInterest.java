@@ -8,7 +8,7 @@ public class CompoundInterest {
     int period = Integer.parseInt(args[2]);
 
     double totalAmount = principal;
-    for(int count = 1;count <= period; count++){
+    for(int year = 1;year <= period; year++){
       totalAmount *= (1 + interestRate);
     }
 
