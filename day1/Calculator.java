@@ -8,35 +8,34 @@ public class Calculator {
     int operand1 = Integer.parseInt(args[1]);
     int operand2 = Integer.parseInt(args[2]);
 
+    int result;
+
     switch(operator){
       case "+" : 
-        int sum = operand1 + operand2;
-        System.out.println("Sum : " + sum); 
+        result = operand1 + operand2;
         break;
 
       case "-" : 
-        int diff = operand1 - operand2;
-        System.out.println("Difference : " + diff); 
+        result = operand1 - operand2;
         break;
 
       case "*" : 
-        int product = operand1 * operand2;
-        System.out.println("Product : " + product); 
+        result = operand1 * operand2;
         break;
 
       case "/" : 
-        int quotient = operand1 / operand2;
-        System.out.println("Quotient : " + quotient); 
+        result = operand1 / operand2;
         break;
 
       case "%" : 
-        int remainder = operand1 % operand2;
-        System.out.println("Remainder : " + remainder); 
+        result = operand1 % operand2;
         break;
 
       default : 
         System.out.println("Please enter a valid operator"); 
-        break;
+        return;
     }
+
+    System.out.println(operand1 + " " + operator + " " + operand2 + " = " + result);
   }
 }
