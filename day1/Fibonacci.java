@@ -2,15 +2,13 @@
 // Input: 1 number(number of terms to print)
 
 public class Fibonacci {
-  public static void printFibonacci(int termLimit ){
-    int currentTerm = 0;
-    int nextTerm = 1;
-
-    for(int term = 1; term <= termLimit; term++){
-      System.out.println(currentTerm);
-      nextTerm = currentTerm + nextTerm;;
-      currentTerm = nextTerm - currentTerm;
+  public static void printFibonacci(int termLimit, int currentTerm, int nextTerm ){
+    if(termLimit == 0){
+      return;
     }
+
+    System.out.println(currentTerm);
+    printFibonacci(termLimit - 1, nextTerm, nextTerm + currentTerm);
   }
 
   public static void main(String[] args) {
@@ -21,6 +19,6 @@ public class Fibonacci {
     }
 
     int termLimit = Integer.parseInt(args[0]);
-    printFibonacci(termLimit);
+    printFibonacci(termLimit, 0, 1);
   }
 }
