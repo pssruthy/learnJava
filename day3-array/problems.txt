@@ -19,6 +19,7 @@
 --DONE
 4. Write a function to find the average of an integer array
 
+--DONE
 5. Write a function to find if a given array is in strict ascending order.
    Each number should be greater than the previous number in the array. Return
    a boolean:
