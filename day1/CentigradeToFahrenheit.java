@@ -2,6 +2,10 @@
 // Input: 1 number (temperature in Celsius)
 
 public class CentigradeToFahrenheit{
+  public static double getFahrenheit(float centigrade){
+    return ((centigrade * 9 )/ 5.0) + 32;
+  }
+
   public static void main(String[] args) {
 
     if(args.length < 1){
@@ -10,9 +14,8 @@ public class CentigradeToFahrenheit{
     }
 
     float centigrade = Float.parseFloat(args[0]);
-    double fahrenheit = ((centigrade * 9 )/ 5.0) + 32;
 
     System.out.println("Centigrade : " + centigrade );
-    System.out.println("Fahrenheit : " + fahrenheit );
+    System.out.println("Fahrenheit : " + getFahrenheit(centigrade) );
   }
 }

@@ -2,6 +2,18 @@
 // Input: 2 numbers
 
 public class LCM {
+  public static int getLcm(int num1, int num2){
+    int smallerNum = Math.min(num1, num2);
+    int biggerNum = Math.max(num1, num2);
+
+    int lcm = biggerNum;
+    while(lcm % smallerNum != 0){
+      lcm += biggerNum;
+    }
+
+    return lcm;
+  }
+
   public static void main(String[] args) {
 
     if(args.length < 2){
@@ -12,14 +24,6 @@ public class LCM {
     int num1 = Integer.parseInt(args[0]);
     int num2 = Integer.parseInt(args[1]);
 
-    int smallerNum = Math.min(num1, num2);
-    int biggerNum = Math.max(num1, num2);
-
-    int number = biggerNum;
-    while(number % smallerNum != 0){
-      number += biggerNum;
-    }
-
-    System.out.println("LCM of " + smallerNum + " and " + biggerNum + " is " + number);
+    System.out.println("LCM of " + num1 + " and " + num2 + " is " + getLcm(num1, num2));
   }
 }

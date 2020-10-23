@@ -2,19 +2,27 @@
 // Input: 2 numbers (m and n)
 
 public class MultiplicationTable {
-  public static void main(String[] args) {
+  public static int getProduct(int num1, int num2){
+    return num1 * num2;
+  }
 
+  public static void printMultiplicationTable(int number, int multiplier){
+    
+    for(int count = 1; count <= multiplier; count++){
+      System.out.println(count + " x " + number + " = " + getProduct(count, number));
+    }
+
+  }
+
+  public static void main(String[] args) {
     if(args.length < 2){
       System.out.println("Please give 2 parameters");
       return;
     }
 
-    int m = Integer.parseInt(args[0]);
-    int n = Integer.parseInt(args[1]);
+    int number = Integer.parseInt(args[1]);
+    int multiplier = Integer.parseInt(args[0]);
 
-    for(int count = 1; count <= n; count++){
-      int product = m * count;
-      System.out.println(m + " X " + count + " = " + product );
-    }
+    printMultiplicationTable(number, multiplier);
   }
 }
