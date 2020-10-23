@@ -16,6 +16,7 @@
 --DONE
 3. Write a function to find the largest number in an integer array.
 
+--DONE
 4. Write a function to find the average of an integer array
 
 5. Write a function to find if a given array is in strict ascending order.
