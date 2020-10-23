@@ -1,6 +1,6 @@
 public class RangeOfNumbers {
   public static void printArray(int[] array) {
-    
+
     for (int i : array) {
       System.out.println(i);
     }
@@ -17,8 +17,14 @@ public class RangeOfNumbers {
     }
     return rangeOfNumbers;
   }
+
+  public static int[] getRangeOfNumbers(int start, int end){
+    return getRangeOfNumbers(start, end, 1);
+  }
   
   public static void main(String[] args) {
-    printArray(getRangeOfNumbers(3, 8, 2));
+    printArray(getRangeOfNumbers(2, 10, 2));
+    System.out.println();
+    printArray(getRangeOfNumbers(5, 8));
   }
 }
