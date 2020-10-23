@@ -29,6 +29,7 @@
        int[] numbers = {1,1,2}
        isAscending(numbers) => false
 
+--DONE
 6. Write a function to find if two character arrays are equal. 
 
 7. Write a function to concatenate two integer arrays
