@@ -1,12 +1,12 @@
 public class OddSeries {
-  public static void printOddSeries(int limit){
-    int currentOdd = 1;
-
-    for(int count = 1; count <= limit; count++){
-      System.out.println(currentOdd);
-      currentOdd += 2;
+  public static void printOddSeries(int limit, int currentOdd){
+    if(limit == 0){
+      return;
     }
 
+    System.out.println(currentOdd);
+    printOddSeries(limit - 1, currentOdd + 2);
+    return;
   }
 
   public static void main(String[] args) {
@@ -17,6 +17,6 @@ public class OddSeries {
     }
 
     int limit = Integer.parseInt(args[0]);
-    printOddSeries(limit);
+    printOddSeries(limit, 1);
   }
 }

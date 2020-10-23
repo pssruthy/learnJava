@@ -1,10 +1,12 @@
 public class EvenSeries {
-  public static void printEvenSeries(int limit){
-    int currentEven = 2;
-    for(int count = 1; count <= limit; count++){
-      System.out.println(currentEven);
-      currentEven += 2;
+  public static void printEvenSeries(int limit, int currentEven){
+    if(limit == 0){
+      return;
     }
+
+    System.out.println(currentEven);
+    printEvenSeries(limit - 1, currentEven + 2);
+    return;
   }
 
   public static void main(String[] args) {
@@ -15,6 +17,6 @@ public class EvenSeries {
     }
 
     int limit = Integer.parseInt(args[0]);
-    printEvenSeries(limit);
+    printEvenSeries(limit, 2);
   }
 }
