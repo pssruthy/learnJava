@@ -35,6 +35,7 @@
 --DONE
 7. Write a function to concatenate two integer arrays
 
+--DONE
 8. Write a function that returns a new array consisting of only non-zero values 
    from the original array. Do not modify the original array:
 
