@@ -32,6 +32,7 @@
 --DONE
 6. Write a function to find if two character arrays are equal. 
 
+--DONE
 7. Write a function to concatenate two integer arrays
 
 8. Write a function that returns a new array consisting of only non-zero values 
