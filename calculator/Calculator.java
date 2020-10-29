@@ -1,25 +1,43 @@
 public class Calculator {
-  public static double execute(String operator, double operand1, double operand2) {
-    double result = 0;
+  public double result;
 
+  public Calculator(double value) {
+    this.result = value;
+  }
+
+  public void execute(String operator, double operand) {
+    
     switch(operator) {
       case "+" : 
-        result = operand1 + operand2;
+        this.result += operand;
         break;
 
       case "-" : 
-        result = operand1 - operand2;
+        this.result -= operand;
         break;
 
       case "x" : 
-        result = operand1 * operand2;
+        this.result *= operand;
         break;
 
       case "/" : 
-        result = operand1 / operand2;
+        this.result /= operand;
         break;
-
     }
-    return result;   
+  }
+
+  public double getResult() {
+    return this.result;
+  }
+
+  public static void main(String[] args) {
+
+    Calculator calc = new Calculator(Double.parseDouble(args[0]));
+
+    for(int index = 1; index < args.length; index += 2) {
+      calc.execute(args[index], Double.parseDouble(args[index + 1]));
+    }
+
+    System.out.println(calc.getResult());
   }
 }
